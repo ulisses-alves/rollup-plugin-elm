@@ -1,0 +1,36 @@
+{
+  "name": "rollup-plugin-elm",
+  "version": "1.0.0",
+  "description": "Import .elm files as ES6 modules.",
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "elm"
+  ],
+  "repository": "ulisses-alves/rollup-plugin-elm",
+  "main": "dist/rollup-plugin-elm.js",
+  "author": "Ulisses Bini de Paiva Alves <ulissesbpalves@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "node-elm-compiler": "^4.3.3",
+    "rollup-pluginutils": "^2.0.1",
+    "uglify-es": "^3.1.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-optimize-js": "^0.0.4",
+    "rollup-plugin-uglify": "^2.0.1"
+  }
+}

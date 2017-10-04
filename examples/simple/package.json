@@ -1,0 +1,15 @@
+{
+  "name": "rollup-plugin-elm-examples-simple",
+  "version": "1.0.0",
+  "main": "rollup.config.js",
+  "author": "Ulisses Bini de Paiva Alves <ulissesbpalves@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "elm": "^0.18.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-commonjs": "^8.2.1"
+  }
+}
