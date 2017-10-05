@@ -1,5 +1,5 @@
 import commonjs from 'rollup-plugin-commonjs'
-import elm from '../../src/index'
+import elm from 'rollup-plugin-elm'
 
 export default {
   input: 'src/index.js',
@@ -9,7 +9,7 @@ export default {
   },
   plugins: [
     elm({
-      exclude: 'node_modules/**',
+      exclude: 'elm-stuff/**',
       compiler: {
         debug: true
       }
@@ -17,5 +17,8 @@ export default {
     commonjs({
       extensions: ['.js', '.elm']
     })
-  ]
+  ],
+  watch: {
+    include: 'src/**'
+  }
 }

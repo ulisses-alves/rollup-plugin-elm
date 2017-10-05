@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-elm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Import .elm files as ES6 modules.",
   "keywords": [
     "rollup",
