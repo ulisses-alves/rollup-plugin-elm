@@ -1,5 +1,5 @@
 import { createFilter } from 'rollup-pluginutils'
-import UglifyJS from 'uglify-es'
+import UglifyJS from 'uglify-js'
 import elmCompiler from 'node-elm-compiler'
 
 const defaultOptions = {

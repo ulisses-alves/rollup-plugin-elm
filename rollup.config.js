@@ -1,14 +1,12 @@
 import uglify from 'rollup-plugin-uglify'
-import optimize from 'rollup-plugin-optimize-js'
+import { minify } from 'uglify-es'
 import babel from 'rollup-plugin-babel'
-
-const name = 'rollup-plugin-elm'
 
 export default {
   input: 'src/index.js',
   output: {
     file: `dist/rollup-plugin-elm.js`,
-    format: 'cjs',
+    format: 'es',
   },
   external: [
     'babel-runtime/regenerator',
@@ -16,15 +14,13 @@ export default {
     'babel-runtime/helpers/asyncToGenerator',
     'node-elm-compiler',
     'rollup-pluginutils',
-    'uglify-es'
+    'uglify-js'
   ],
   plugins: [
     babel({
       exclude: 'node_modules/**',
-      plugins: ['external-helpers'],
       runtimeHelpers: true
     }),
-    uglify(),
-    optimize()
+    uglify({}, minify)
   ]
 }
