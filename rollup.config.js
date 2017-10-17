@@ -1,13 +1,20 @@
 import uglify from 'rollup-plugin-uglify'
 import { minify } from 'uglify-es'
 import babel from 'rollup-plugin-babel'
+import pkg from './package.json'
 
 export default {
   input: 'src/index.js',
-  output: {
-    file: `dist/rollup-plugin-elm.js`,
-    format: 'es',
-  },
+  output: [
+    {
+      file: pkg.main,
+      format: 'cjs',
+    },
+    {
+      file: pkg.module,
+      format: 'es'
+    }
+  ],
   external: [
     'babel-runtime/regenerator',
     'babel-runtime/core-js/object/assign',

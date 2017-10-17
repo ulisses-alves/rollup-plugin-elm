@@ -1,5 +1,5 @@
 import commonjs from 'rollup-plugin-commonjs'
-import elm from 'rollup-plugin-elm'
+import elm from '../../dist/rollup-plugin-elm.es'
 
 export default {
   input: 'src/index.js',
