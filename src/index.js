@@ -1,5 +1,4 @@
 import { createFilter } from 'rollup-pluginutils'
-import UglifyJS from 'uglify-js'
 import elmCompiler from 'node-elm-compiler'
 
 const defaultOptions = {
@@ -28,10 +27,9 @@ export default function elm (options = {}) {
 
 async function transform (source, id, options) {
   const elm = await compile(id, options.compiler)
-  const code = UglifyJS.minify(elm).code
 
   return {
-    code,
+    code: elm,
     map: { mappings: '' }
   }
 }
