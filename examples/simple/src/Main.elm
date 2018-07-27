@@ -1,6 +1,7 @@
 module Main exposing (main)
 
 import Counter
+import Json.Decode
 
 
 main : Program Counter.Model Counter.Model Counter.Msg
