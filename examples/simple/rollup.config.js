@@ -17,8 +17,5 @@ export default {
     commonjs({
       extensions: ['.js', '.elm']
     })
-  ],
-  watch: {
-    include: 'src/**'
-  }
+  ]
 }

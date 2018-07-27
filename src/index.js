@@ -27,10 +27,12 @@ export default function elm (options = {}) {
 
 async function transform (source, id, options) {
   const elm = await compile(id, options.compiler)
+  const dependencies = await elmCompiler.findAllDependencies(id)
 
   return {
     code: elm,
-    map: { mappings: '' }
+    map: { mappings: '' },
+    dependencies
   }
 }
 

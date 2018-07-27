@@ -1,5 +1,3 @@
-import uglify from 'rollup-plugin-uglify'
-import { minify } from 'uglify-es'
 import pkg from './package.json'
 
 export default {
@@ -17,8 +15,5 @@ export default {
   external: [
     'node-elm-compiler',
     'rollup-pluginutils'
-  ],
-  plugins: [
-    uglify({}, minify)
   ]
 }

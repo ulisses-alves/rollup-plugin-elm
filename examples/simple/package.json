@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-elm-examples-simple",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "rollup.config.js",
   "author": "Ulisses Bini de Paiva Alves <ulissesbpalves@gmail.com>",
   "license": "MIT",
@@ -8,10 +8,10 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "elm": "^0.18.0",
-    "rollup": "^0.56.3",
-    "rollup-plugin-commonjs": "^8.2.1",
-    "rollup-plugin-elm": "^1.0.3"
+    "elm": "0.18.0",
+    "rollup": "0.63.4",
+    "rollup-plugin-commonjs": "8.4.1",
+    "rollup-plugin-elm": "1.0.4"
   },
   "devDependencies": {}
 }

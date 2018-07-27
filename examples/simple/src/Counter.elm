@@ -1,17 +1,13 @@
-port module Counter exposing (main)
+port module Counter
+    exposing
+        ( Model
+        , Msg
+        , init
+        , update
+        , subscriptions
+        )
 
-import Json.Decode
 import Platform
-
-
-main : Program Model Model Msg
-main =
-    Platform.programWithFlags
-        { init = init
-        , update = update
-        , subscriptions = subscriptions
-        }
-
 
 
 -- PORTS
