@@ -28,11 +28,7 @@ export default {
       // add .elm extension
       extensions: ['.js', '.elm']
     })
-  ],
-  watch: {
-    // add .elm files to watched files
-    include: 'src/**'
-  }
+  ]
 }
 ```
 
