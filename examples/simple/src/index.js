@@ -1,13 +1,5 @@
-import Elm from './Main.elm'
+import Elm from './HelloWorld.elm'
 
-export const app = Elm.Main.worker({
-  value: 0
+Elm.HelloWorld.init({
+  node: document.getElementById('main')
 })
-
-app.ports.updated.subscribe(model => {
-  console.log('UPDATED', model)
-})
-
-app.ports.increment.send(null)
-app.ports.increment.send(null)
-app.ports.increment.send(null)

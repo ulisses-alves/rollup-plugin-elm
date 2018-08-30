@@ -30,7 +30,7 @@ async function transform (source, id, options) {
   const dependencies = await elmCompiler.findAllDependencies(id)
 
   return {
-    code: elm,
+    code: wrapElmCode(elm),
     map: { mappings: '' },
     dependencies
   }
@@ -39,12 +39,15 @@ async function transform (source, id, options) {
 
 async function compile (filename, options) {
   const compilerOptions = {
-    output: '.js',
-    yes: true,
+    output: '.js'
   }
 
   return await elmCompiler.compileToString(
     [ filename ],
     Object.assign({}, options, compilerOptions)
   )
+}
+
+function wrapElmCode (code) {
+  return `let output = {}; (function () { ${code} }).call(output); export default output.Elm;`
 }

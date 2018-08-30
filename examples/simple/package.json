@@ -5,13 +5,15 @@
   "author": "Ulisses Bini de Paiva Alves <ulissesbpalves@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "start": "http-server -c-1"
   },
   "dependencies": {
-    "elm": "0.18.0",
-    "rollup": "0.63.4",
-    "rollup-plugin-commonjs": "8.4.1",
-    "rollup-plugin-elm": "1.0.4"
+    "elm": "^0.19.0-bugfix2",
+    "rollup": "0.63.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "node-elm-compiler": "^5.0.1"
+  }
 }
