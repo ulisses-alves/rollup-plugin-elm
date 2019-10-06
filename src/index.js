@@ -19,23 +19,27 @@ export default function elm (options = {}) {
       if (!/.elm$/i.test(id)) return null
       if (!filter(id)) return null
 
-      return transform(source, id, opt)
-      .catch(err => this.error(err))
+      const transform = async (source, id, options) => {
+        const elm = await compile(id, options.compiler)
+        const dependencies = await elmCompiler.findAllDependencies(id)
+        const compiled = {
+          code: wrapElmCode(elm),
+          map: { mappings: '' }
+        }
+
+        if (this.addWatchFile) {
+          dependencies.forEach(this.addWatchFile)
+        } else {
+          compiled.dependencies = dependencies
+        }
+
+        return compiled
+      }
+
+      return transform(source, id, opt).catch(err => this.error(err))
     }
   }
 }
-
-async function transform (source, id, options) {
-  const elm = await compile(id, options.compiler)
-  const dependencies = await elmCompiler.findAllDependencies(id)
-
-  return {
-    code: wrapElmCode(elm),
-    map: { mappings: '' },
-    dependencies
-  }
-}
-
 
 async function compile (filename, options) {
   const compilerOptions = {
