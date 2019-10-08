@@ -27,6 +27,6 @@
     "rollup-pluginutils": "^2.3.1"
   },
   "devDependencies": {
-    "rollup": "0.63.4"
+    "rollup": "^1.23.1"
   }
 }

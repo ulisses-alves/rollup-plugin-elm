@@ -1,5 +1,5 @@
 import path from 'path'
-import elm from '../../dist/rollup-plugin-elm.es'
+import elm from 'rollup-plugin-elm'
 
 export default {
   input: 'src/index.js',
