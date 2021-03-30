@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-elm",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Import .elm files as ES6 modules.",
   "keywords": [
     "rollup",
@@ -23,13 +23,13 @@
     "README.md"
   ],
   "dependencies": {
-    "node-elm-compiler": "^5.0.4",
+    "node-elm-compiler": "^5.0.5",
     "rollup-pluginutils": "^2.8.2"
   },
   "devDependencies": {
-    "rollup": "^1.28.0"
+    "rollup": "2.44.0"
   },
   "peerDependencies": {
-    "rollup": "1.x"
+    "rollup": "2.x"
   }
 }
